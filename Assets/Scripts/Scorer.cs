@@ -10,7 +10,8 @@ public class Scorer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        hits++;
+        if(collision.gameObject.tag != "Hit") { hits++; }
+
         Debug.Log("you bumped into something this many times: " + hits);
     }
 }
